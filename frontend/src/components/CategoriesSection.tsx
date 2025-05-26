@@ -80,7 +80,7 @@ const CategoriesSection: React.FC = () => {
             {/* Section Title */}
             <div className="section-tittle text-center">
               <span className="block text-blue-600 font-semibold mb-2">Popular Online Courses</span>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Let's Browse All Categories</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Let&apos;s Browse All Categories</h2>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const AboutSection: React.FC = () => {
           <div className="about-caption">
             <div className="section-tittle mb-6">
               <span className="block text-blue-600 font-semibold mb-2">About Our Platform</span>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Building a Brighter Future for Sindh's Youth</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Building a Brighter Future for Sindh&apos;s Youth</h2>
             </div>
             <p className="text-gray-600 mb-4">
               Our mission is to empower the students and job seekers of Sindh with personalized AI-driven guidance for education, careers, and skill development. We aim to bridge the information gap and provide accessible resources for everyone.

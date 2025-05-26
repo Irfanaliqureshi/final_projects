@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
             <p className="text-sm mb-4">
-              Empowering Sindh's youth with AI-driven career and education guidance.
+              Empowering Sindh&apos;s youth with AI-driven career and education guidance.
             </p>
             {/* Social Icons */}
             <div className="footer-social flex space-x-3">

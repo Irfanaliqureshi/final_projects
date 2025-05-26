@@ -1,32 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 // Define structure for a single team member (instructor)
 interface TeamMemberProps {
   imgSrc: string;
   name: string;
   title: string;
-  socialLinks?: {
-    facebook?: string;
-    twitter?: string;
-    linkedin?: string;
-    instagram?: string;
-  };
+  // Removed unused socialLinks prop
 }
 
-const TeamMemberCard: React.FC<TeamMemberProps> = ({ imgSrc, name, title, socialLinks }) => {
+const TeamMemberCard: React.FC<TeamMemberProps> = ({ imgSrc, name, title }) => { // Removed unused socialLinks parameter
   return (
     <div className="single-team mb-8 text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
       <div className="team-img mb-4 relative overflow-hidden rounded-full w-32 h-32 mx-auto">
         <Image src={imgSrc} alt={name} layout="fill" objectFit="cover" />
         {/* Social Icons Overlay (Optional - Add if needed based on template) */}
-        {/* <div className="team-social absolute inset-0 bg-black/50 flex justify-center items-center space-x-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
-          {socialLinks?.facebook && <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500"><i className="fab fa-facebook-f"></i></a>}
-          {socialLinks?.twitter && <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400"><i className="fab fa-twitter"></i></a>}
-          {socialLinks?.linkedin && <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-700"><i className="fab fa-linkedin-in"></i></a>}
-          {socialLinks?.instagram && <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-500"><i className="fab fa-instagram"></i></a>}
-        </div> */}
       </div>
       <div className="team-caption">
         <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
@@ -80,7 +68,6 @@ const TeamSection: React.FC = () => {
               imgSrc={instructor.imgSrc}
               name={instructor.name}
               title={instructor.title}
-              // socialLinks={instructor.socialLinks} // Add if implementing social links
             />
           ))}
         </div>

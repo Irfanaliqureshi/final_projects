@@ -22,7 +22,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({ imgSrc, name, role, t
         </div>
       </div>
       <div className="testimonial-caption">
-        <p className="text-gray-700 italic">"{text}"</p>
+        <p className="text-gray-700 italic">&quot;{text}&quot;</p>
       </div>
     </div>
   );
