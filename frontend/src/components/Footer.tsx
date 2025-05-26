@@ -12,8 +12,8 @@ const Footer: React.FC = () => {
             <div className="footer-logo mb-6">
               {/* Assuming a white/light version of the logo for dark background */}
               <Link href="/">
+                {/* No legacyBehavior needed here as Image is the direct child */}
                 <Image src="/assets/img/logo/logo_footer.png" alt="Footer Logo" width={150} height={40} /> 
-                {/* Replace with actual footer logo path if available, or use main logo */}
               </Link>
             </div>
             <p className="text-sm mb-4">
@@ -33,11 +33,11 @@ const Footer: React.FC = () => {
           <div className="footer-widget">
             <h4 className="widget-title text-white text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about"><a className="hover:text-white hover:underline">About Us</a></Link></li>
-              <li><Link href="/courses"><a className="hover:text-white hover:underline">Courses</a></Link></li>
-              <li><Link href="/contact"><a className="hover:text-white hover:underline">Contact</a></Link></li>
-              <li><Link href="/faq"><a className="hover:text-white hover:underline">FAQ</a></Link></li>
-              <li><Link href="/privacy-policy"><a className="hover:text-white hover:underline">Privacy Policy</a></Link></li>
+              <li><Link href="/about" legacyBehavior><a className="hover:text-white hover:underline">About Us</a></Link></li>
+              <li><Link href="/courses" legacyBehavior><a className="hover:text-white hover:underline">Courses</a></Link></li>
+              <li><Link href="/contact" legacyBehavior><a className="hover:text-white hover:underline">Contact</a></Link></li>
+              <li><Link href="/faq" legacyBehavior><a className="hover:text-white hover:underline">FAQ</a></Link></li>
+              <li><Link href="/privacy-policy" legacyBehavior><a className="hover:text-white hover:underline">Privacy Policy</a></Link></li>
             </ul>
           </div>
 
@@ -45,11 +45,11 @@ const Footer: React.FC = () => {
           <div className="footer-widget">
             <h4 className="widget-title text-white text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/blog"><a className="hover:text-white hover:underline">Blog</a></Link></li>
-              <li><Link href="/scholarships"><a className="hover:text-white hover:underline">Scholarships</a></Link></li>
-              <li><Link href="/career-guidance"><a className="hover:text-white hover:underline">Career Guidance</a></Link></li>
-              <li><Link href="/skill-development"><a className="hover:text-white hover:underline">Skill Development</a></Link></li>
-              <li><Link href="/legal-toolkit"><a className="hover:text-white hover:underline">Legal Toolkit</a></Link></li>
+              <li><Link href="/blog" legacyBehavior><a className="hover:text-white hover:underline">Blog</a></Link></li>
+              <li><Link href="/scholarships" legacyBehavior><a className="hover:text-white hover:underline">Scholarships</a></Link></li>
+              <li><Link href="/career-guidance" legacyBehavior><a className="hover:text-white hover:underline">Career Guidance</a></Link></li>
+              <li><Link href="/skill-development" legacyBehavior><a className="hover:text-white hover:underline">Skill Development</a></Link></li>
+              <li><Link href="/legal-toolkit" legacyBehavior><a className="hover:text-white hover:underline">Legal Toolkit</a></Link></li>
             </ul>
           </div>
 
