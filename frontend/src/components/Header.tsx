@@ -11,14 +11,6 @@ const Header: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center">
               {/* Left Social Icons (Optional - can be added later if needed) */}
-              {/* <div className="header-left-social">
-                <ul className="flex space-x-4">
-                  <li><a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-twitter"></i></a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-google-plus-g"></i></a></li>
-                </ul>
-              </div> */}
               <div className="header-info-left">
                 <ul className="flex space-x-4 text-sm text-gray-700">
                   <li>needhelp@gmail.com</li>
@@ -28,8 +20,18 @@ const Header: React.FC = () => {
               <div className="header-info-right">
                 <ul className="flex space-x-4 text-sm">
                   {/* TODO: Implement actual Login/Register functionality */}
-                  <li><Link href="/login" className="text-gray-700 hover:text-blue-500"><i className="ti-user mr-1"></i>Login</Link></li>
-                  <li><Link href="/register" className="text-gray-700 hover:text-blue-500"><i className="ti-lock mr-1"></i>Register</Link></li>
+                  <li>
+                    <Link href="/login" className="text-gray-700 hover:text-blue-500">
+                      {/* Wrap multiple children in a single element */}
+                      <span><i className="ti-user mr-1"></i>Login</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/register" className="text-gray-700 hover:text-blue-500">
+                      {/* Wrap multiple children in a single element */}
+                      <span><i className="ti-lock mr-1"></i>Register</span>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
