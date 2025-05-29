@@ -18,14 +18,22 @@ const SubjectCard: React.FC<SubjectCardProps> = ({ imgSrc, category, title, pric
         <Image src={imgSrc} alt={title} width={400} height={250} className="w-full object-cover" />
         <div className="topic-content-box absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent">
           <div className="topic-content flex justify-between items-center">
-            <h3 className="text-white"><Link href={link}><a className="hover:underline">{category}</a></Link></h3>
+            {/* Refactored Link: Removed nested <a> tag */}
+            <h3 className="text-white">
+              <Link href={link} className="hover:underline">
+                {category}
+              </Link>
+            </h3>
             <span className="text-white font-semibold bg-blue-600 px-2 py-1 rounded text-sm">{price}</span>
           </div>
         </div>
       </div>
       <div className="topic-caption p-4">
         <h4 className="text-lg font-semibold mb-2">
-          <Link href={link}><a className="text-gray-900 hover:text-blue-600">{title}</a></Link>
+          {/* Refactored Link: Removed nested <a> tag */}
+          <Link href={link} className="text-gray-900 hover:text-blue-600">
+            {title}
+          </Link>
         </h4>
         {/* Optional: Add rating or other details here */}
       </div>
@@ -38,7 +46,7 @@ const PopularSubjects: React.FC = () => {
   const subjects: SubjectCardProps[] = [
     {
       imgSrc: '/assets/img/gallery/topic1.png', // Use paths relative to /public
-      category: 'Programing', 
+      category: 'Programing',
       title: 'Basic Computer Programming',
       price: '$20',
       link: '/courses/programming/basic-computer'
@@ -107,8 +115,9 @@ const PopularSubjects: React.FC = () => {
         </div>
         {/* View More Button */}
         <div className="flex justify-center mt-12">
-          <Link href="/courses" legacyBehavior>
-            <a className="inline-block border border-blue-600 text-blue-600 font-semibold py-3 px-8 rounded hover:bg-blue-600 hover:text-white transition duration-300">View More Subjects</a>
+          {/* Refactored Link: Removed nested <a> tag and applied styles directly */}
+          <Link href="/courses" className="inline-block border border-blue-600 text-blue-600 font-semibold py-3 px-8 rounded hover:bg-blue-600 hover:text-white transition duration-300">
+            View More Subjects
           </Link>
         </div>
       </div>
