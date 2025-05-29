@@ -17,8 +17,9 @@ const HeroSection: React.FC = () => {
               <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">The New Way To Learn Properly With Us!</h1>
               {/* Hero Button */}
               <div className="hero__btn">
-                <Link href="/courses" legacyBehavior> {/* Changed link to /courses as per potential site structure */}
-                  <a className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded hover:bg-blue-700 transition duration-300">Get Started</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/courses" className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded hover:bg-blue-700 transition duration-300">
+                  Get Started
                 </Link>
               </div>
             </div>

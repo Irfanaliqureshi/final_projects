@@ -10,15 +10,14 @@ const Footer: React.FC = () => {
           {/* Footer Widget 1: About */}
           <div className="footer-widget">
             <div className="footer-logo mb-6">
-              <Link href="/" legacyBehavior>
-                <a>
-                  <Image
-                    src="/assets/img/logo/logo_footer.png"
-                    alt="Footer Logo"
-                    width={150}
-                    height={40}
-                  />
-                </a>
+              {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+              <Link href="/">
+                <Image
+                  src="/assets/img/logo/logo_footer.png"
+                  alt="Footer Logo"
+                  width={150}
+                  height={40}
+                />
               </Link>
             </div>
             <p className="text-sm mb-4">
@@ -47,28 +46,33 @@ const Footer: React.FC = () => {
             <h4 className="widget-title text-white text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" legacyBehavior>
-                  <a className="hover:text-white hover:underline">About Us</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/about" className="hover:text-white hover:underline">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/courses" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Courses</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/courses" className="hover:text-white hover:underline">
+                  Courses
                 </Link>
               </li>
               <li>
-                <Link href="/contact" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Contact</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/contact" className="hover:text-white hover:underline">
+                  Contact
                 </Link>
               </li>
               <li>
-                <Link href="/faq" legacyBehavior>
-                  <a className="hover:text-white hover:underline">FAQ</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/faq" className="hover:text-white hover:underline">
+                  FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Privacy Policy</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/privacy-policy" className="hover:text-white hover:underline">
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
@@ -79,28 +83,33 @@ const Footer: React.FC = () => {
             <h4 className="widget-title text-white text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/blog" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Blog</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/blog" className="hover:text-white hover:underline">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link href="/scholarships" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Scholarships</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/scholarships" className="hover:text-white hover:underline">
+                  Scholarships
                 </Link>
               </li>
               <li>
-                <Link href="/career-guidance" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Career Guidance</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/career-guidance" className="hover:text-white hover:underline">
+                  Career Guidance
                 </Link>
               </li>
               <li>
-                <Link href="/skill-development" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Skill Development</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/skill-development" className="hover:text-white hover:underline">
+                  Skill Development
                 </Link>
               </li>
               <li>
-                <Link href="/legal-toolkit" legacyBehavior>
-                  <a className="hover:text-white hover:underline">Legal Toolkit</a>
+                {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+                <Link href="/legal-toolkit" className="hover:text-white hover:underline">
+                  Legal Toolkit
                 </Link>
               </li>
             </ul>
@@ -155,3 +164,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+

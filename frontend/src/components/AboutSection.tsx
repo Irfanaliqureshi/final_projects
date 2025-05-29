@@ -38,8 +38,9 @@ const AboutSection: React.FC = () => {
             <p className="text-gray-600 mb-8">
               Leveraging cutting-edge AI and local insights, we offer tailored recommendations, connect users with opportunities, and foster a supportive community for growth and success.
             </p>
-            <Link href="/about" legacyBehavior>
-              <a className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded hover:bg-blue-700 transition duration-300">Learn More</a>
+            {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+            <Link href="/about" className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded hover:bg-blue-700 transition duration-300">
+              Learn More
             </Link>
           </div>
         </div>

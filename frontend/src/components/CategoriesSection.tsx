@@ -18,13 +18,15 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ iconClass, title, descripti
       </div>
       <div className="cat-cap">
         <h5 className="text-xl font-semibold mb-2">
-          <Link href={link} legacyBehavior>
-            <a className="text-gray-900 hover:text-blue-600">{title}</a>
+          {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+          <Link href={link} className="text-gray-900 hover:text-blue-600">
+            {title}
           </Link>
         </h5>
         <p className="text-gray-600 mb-4 text-sm">{description}</p>
-        <Link href={link} legacyBehavior>
-          <a className="read-more1 text-blue-600 hover:underline font-medium text-sm">Read More &gt;</a>
+        {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+        <Link href={link} className="read-more1 text-blue-600 hover:underline font-medium text-sm">
+          Read More &gt;
         </Link>
       </div>
     </div>
@@ -97,8 +99,9 @@ const CategoriesSection: React.FC = () => {
         </div>
         {/* Section Button */}
         <div className="flex justify-center mt-12">
-          <Link href="/courses" legacyBehavior>
-            <a className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded hover:bg-blue-700 transition duration-300">Find More Courses</a>
+          {/* Refactored Link: Removed legacyBehavior and nested <a> */}
+          <Link href="/courses" className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded hover:bg-blue-700 transition duration-300">
+            Find More Courses
           </Link>
         </div>
       </div>
