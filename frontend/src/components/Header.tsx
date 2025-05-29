@@ -10,26 +10,28 @@ const Header: React.FC = () => {
         <div className="header-top hidden lg:block">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center">
-              {/* Left Social Icons (Optional - can be added later if needed) */}
+              {/* Contact Info */}
               <div className="header-info-left">
                 <ul className="flex space-x-4 text-sm text-gray-700">
                   <li>needhelp@gmail.com</li>
                   <li>666 7475 25252</li>
                 </ul>
               </div>
+              {/* Login/Register */}
               <div className="header-info-right">
                 <ul className="flex space-x-4 text-sm">
-                  {/* TODO: Implement actual Login/Register functionality */}
                   <li>
-                    <Link href="/login" className="text-gray-700 hover:text-blue-500">
-                      {/* Wrap multiple children in a single element */}
-                      <span><i className="ti-user mr-1"></i>Login</span>
+                    <Link href="/login" legacyBehavior>
+                      <a className="text-gray-700 hover:text-blue-500">
+                        <i className="ti-user mr-1"></i>Login
+                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/register" className="text-gray-700 hover:text-blue-500">
-                      {/* Wrap multiple children in a single element */}
-                      <span><i className="ti-lock mr-1"></i>Register</span>
+                    <Link href="/register" legacyBehavior>
+                      <a className="text-gray-700 hover:text-blue-500">
+                        <i className="ti-lock mr-1"></i>Register
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -38,42 +40,66 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Header Bottom (Sticky) */}
-        {/* TODO: Implement sticky behavior */}
+        {/* Header Bottom */}
         <div className="header-bottom py-4 bg-white shadow-md">
           <div className="container mx-auto px-4">
             <div className="menu-wrapper flex justify-between items-center">
-              {/* Logo (Visible on large screens) */}
+              {/* Logo (large screens) */}
               <div className="logo hidden lg:block">
-                <Link href="/">
-                  <Image src="/assets/img/logo/logo.png" alt="Logo" width={150} height={40} />
+                <Link href="/" legacyBehavior>
+                  <a>
+                    <Image src="/assets/img/logo/logo.png" alt="Logo" width={150} height={40} />
+                  </a>
                 </Link>
               </div>
-
-              {/* Logo (Visible on small screens) */}
+              {/* Logo (mobile) */}
               <div className="logo logo2 block lg:hidden">
-                <Link href="/">
-                  <Image src="/assets/img/logo/logo.png" alt="Logo" width={120} height={32} />
+                <Link href="/" legacyBehavior>
+                  <a>
+                    <Image src="/assets/img/logo/logo.png" alt="Logo" width={120} height={32} />
+                  </a>
                 </Link>
               </div>
 
-              {/* Main Menu (Hidden on small screens) */}
+              {/* Main Menu */}
               <div className="main-menu hidden lg:block">
                 <nav>
                   <ul className="flex space-x-8">
-                    <li><Link href="/" className="text-gray-800 hover:text-blue-500">Home</Link></li>
-                    <li><Link href="/about" className="text-gray-800 hover:text-blue-500">About</Link></li>
-                    <li><Link href="/courses" className="text-gray-800 hover:text-blue-500">Courses</Link></li>
-                    <li><Link href="/instructors" className="text-gray-800 hover:text-blue-500">Instructors</Link></li>
-                    {/* TODO: Implement Blog dropdown */}
-                    <li><Link href="/blog" className="text-gray-800 hover:text-blue-500">Blog</Link></li>
-                    <li><Link href="/contact" className="text-gray-800 hover:text-blue-500">Contact</Link></li>
+                    <li>
+                      <Link href="/" legacyBehavior>
+                        <a className="text-gray-800 hover:text-blue-500">Home</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/about" legacyBehavior>
+                        <a className="text-gray-800 hover:text-blue-500">About</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/courses" legacyBehavior>
+                        <a className="text-gray-800 hover:text-blue-500">Courses</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/instructors" legacyBehavior>
+                        <a className="text-gray-800 hover:text-blue-500">Instructors</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog" legacyBehavior>
+                        <a className="text-gray-800 hover:text-blue-500">Blog</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact" legacyBehavior>
+                        <a className="text-gray-800 hover:text-blue-500">Contact</a>
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
               </div>
 
-              {/* Header Search (Hidden on small screens) */}
-              {/* TODO: Implement search functionality */}
+              {/* Search Box */}
               <div className="header-search hidden lg:block">
                 <form action="#" className="relative">
                   <input type="text" name="Search" placeholder="Search Courses" className="border rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-1 focus:ring-blue-500" />
@@ -83,21 +109,22 @@ const Header: React.FC = () => {
                 </form>
               </div>
 
-              {/* Mobile Menu Button (Visible on small screens) */}
-              {/* TODO: Implement mobile menu toggle */}
+              {/* Mobile Menu Toggle */}
               <div className="lg:hidden">
                 <button className="text-gray-800 focus:outline-none">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                      d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* TODO: Add Mobile Menu component here */}
     </header>
   );
 };
 
 export default Header;
-
