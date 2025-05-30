@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-// import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/HeroSection";
 // import CategoriesSection from "@/components/CategoriesSection";
 // import CountDownSection from "@/components/CountDownSection";
 // import PopularSubjects from "@/components/PopularSubjects";
@@ -12,9 +12,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Temporarily removed sections for debugging */}
+      {/* Adding components back one by one for debugging */}
       <Header />
-      {/* <HeroSection /> */}
+      <HeroSection />
       {/* <CategoriesSection /> */}
       {/* <CountDownSection /> */}
       {/* <PopularSubjects /> */}
