@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-// import CategoriesSection from "@/components/CategoriesSection";
+import CategoriesSection from "@/components/CategoriesSection";
 // import CountDownSection from "@/components/CountDownSection";
 // import PopularSubjects from "@/components/PopularSubjects";
 // import AboutSection from "@/components/AboutSection";
@@ -15,7 +15,7 @@ export default function Home() {
       {/* Adding components back one by one for debugging */}
       <Header />
       <HeroSection />
-      {/* <CategoriesSection /> */}
+      <CategoriesSection />
       {/* <CountDownSection /> */}
       {/* <PopularSubjects /> */}
       {/* <AboutSection /> */}
