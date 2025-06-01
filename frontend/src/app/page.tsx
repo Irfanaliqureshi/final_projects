@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CategoriesSection from "@/components/CategoriesSection";
 import CountDownSection from "@/components/CountDownSection";
-// import PopularSubjects from "@/components/PopularSubjects";
+import PopularSubjects from "@/components/PopularSubjects";
 // import AboutSection from "@/components/AboutSection";
 // import ServicesSection from "@/components/ServicesSection";
 // import TestimonialSection from "@/components/TestimonialSection";
@@ -17,7 +17,7 @@ export default function Home() {
       <HeroSection />
       <CategoriesSection />
       <CountDownSection />
-      {/* <PopularSubjects /> */}
+      <PopularSubjects />
       {/* <AboutSection /> */}
       {/* <ServicesSection /> */}
       {/* <TestimonialSection /> */}
