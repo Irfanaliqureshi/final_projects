@@ -6,7 +6,7 @@ import PopularSubjects from "@/components/PopularSubjects";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import TestimonialSection from "@/components/TestimonialSection";
-// import TeamSection from "@/components/TeamSection";
+import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <TestimonialSection />
-      {/* <TeamSection /> */}
+      <TeamSection />
       <Footer />
     </main>
   );
